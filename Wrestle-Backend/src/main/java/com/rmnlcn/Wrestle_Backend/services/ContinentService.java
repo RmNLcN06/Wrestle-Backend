@@ -5,7 +5,6 @@ import com.rmnlcn.Wrestle_Backend.repositories.ContinentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.math.BigInteger;
 import java.util.List;
 
 @Service
