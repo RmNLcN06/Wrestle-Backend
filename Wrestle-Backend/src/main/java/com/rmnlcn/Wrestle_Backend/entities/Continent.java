@@ -9,30 +9,30 @@ import jakarta.validation.constraints.Size;
 public class Continent {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idContinent;
+    private Long id;
 
     @Column(nullable = false)
     @NotNull(message = "Continent name cannot be null.")
     @Size(min = 3, max = 15, message = "Continent name must be between 3 and 15 characters.")
-    private String nameContinent;
+    private String name;
 
     /********************************************/
 
     // Getters & Setters
-    public Long getIdContinent() {
-        return idContinent;
+    public Long getId() {
+        return id;
     }
 
-    public void setIdContinent(Long idContinent) {
-        this.idContinent = idContinent;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public String getNameContinent() {
-        return nameContinent;
+    public String getName() {
+        return name;
     }
 
-    public void setNameContinent(String nameContinent) {
-        this.nameContinent = nameContinent;
+    public void setName(String name) {
+        this.name = name;
     }
 
 }

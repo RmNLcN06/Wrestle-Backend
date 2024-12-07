@@ -20,21 +20,21 @@ public class ContinentService {
         return continentRepository.findAll();
     }
 
-    public Continent getContinentById(Long idContinent) {
-        return continentRepository.findById(idContinent).orElseThrow(() -> new RuntimeException("Continent not found. Please try again."));
+    public Continent getContinentById(Long id) {
+        return continentRepository.findById(id).orElseThrow(() -> new RuntimeException("Continent not found. Please try again."));
     }
 
     public Continent createContinent(Continent continent) {
         return continentRepository.save(continent);
     }
 
-    public Continent updateContinent(Long idContinent, Continent continentDetails) {
-        Continent continent = getContinentById(idContinent);
-        continent.setNameContinent(continentDetails.getNameContinent());
+    public Continent updateContinent(Long id, Continent continentDetails) {
+        Continent continent = getContinentById(id);
+        continent.setName(continentDetails.getName());
         return continentRepository.save(continent);
     }
 
-    public void deleteContinent(Long idContinent) {
-        continentRepository.deleteById(idContinent);
+    public void deleteContinent(Long id) {
+        continentRepository.deleteById(id);
     }
 }

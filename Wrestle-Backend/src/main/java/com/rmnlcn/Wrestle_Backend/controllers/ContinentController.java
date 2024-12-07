@@ -29,8 +29,8 @@ public class ContinentController {
 
     @GetMapping("/{id}")
     @Operation(summary = "Get a continent by its ID", description = "Retrieve details of a specific continent.")
-    public Continent getContinentById(@PathVariable Long idContinent) {
-        return continentService.getContinentById(idContinent);
+    public Continent getContinentById(@PathVariable Long id) {
+        return continentService.getContinentById(id);
     }
 
     @PostMapping
@@ -41,13 +41,13 @@ public class ContinentController {
 
     @PutMapping("/{id}")
     @Operation(summary = "Update an existing continent", description = "Update detail(s) of a specific continent.")
-    public Continent updateContinent(@PathVariable Long idContinent, @RequestBody Continent continentDetails) {
-        return continentService.updateContinent(idContinent, continentDetails);
+    public Continent updateContinent(@PathVariable Long id, @RequestBody Continent continentDetails) {
+        return continentService.updateContinent(id, continentDetails);
     }
 
     @DeleteMapping("/{id}")
     @Operation(summary = "Delete a continent", description = "Remove a continent from the database.")
-    public void deleteContinent(@PathVariable Long idContinent) {
-        continentService.deleteContinent(idContinent);
+    public void deleteContinent(@PathVariable Long id) {
+        continentService.deleteContinent(id);
     }
 }
