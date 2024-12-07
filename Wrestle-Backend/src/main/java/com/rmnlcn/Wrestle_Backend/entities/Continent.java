@@ -5,14 +5,12 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import org.hibernate.type.descriptor.jdbc.NVarcharJdbcType;
 
-import java.math.BigInteger;
-
 @Entity
 @Table(name = "continents")
 public class Continent {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private BigInteger idContinent;
+    private Long idContinent;
 
     @Column(nullable = false)
     @NotNull(message = "Continent name cannot be null.")
@@ -22,11 +20,11 @@ public class Continent {
     /********************************************/
 
     // Getters & Setters
-    public BigInteger getIdContinent() {
+    public Long getIdContinent() {
         return idContinent;
     }
 
-    public void setIdContinent(BigInteger idContinent) {
+    public void setIdContinent(Long idContinent) {
         this.idContinent = idContinent;
     }
 
