@@ -19,6 +19,8 @@ public class Continent {
     /********************************************/
 
     // Getters & Setters
+
+    // Id
     public Long getId() {
         return id;
     }
@@ -27,6 +29,7 @@ public class Continent {
         this.id = id;
     }
 
+    // Name
     public String getName() {
         return name;
     }

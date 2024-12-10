@@ -36,6 +36,7 @@ public class ContinentController {
     @PostMapping
     @Operation(summary = "Create a new continent", description = "Add a new continent to the database.")
     public Continent createContinent(@RequestBody Continent continent) {
+        continent.setId(null);
         return continentService.createContinent(continent);
     }
 
